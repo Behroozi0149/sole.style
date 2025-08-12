@@ -1,159 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 * {
   box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
 }
-
 body {
   background-color: #f8f9fa;
   color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
 }
-
-/* LOGO */
 .logo {
-  width: 120px;
+  width: 8vw;
+  max-width: 120px;
   height: auto;
+  transition: transform 0.3s ease;
 }
-
+.logo:hover {
+  transform: scale(1.08);
+}
 .header {
   background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
   border-bottom: 1px solid #e0e0e0;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-  padding: 15px 5vw;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  padding: 10px 5vw 25px;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 15px;
   position: relative;
   z-index: 10;
+  flex-wrap: wrap;
 }
-
-/* LOGIN BUTTON */
+.header-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  width: 100%;
+}
 .login {
   position: absolute;
   top: 15px;
   right: 5vw;
   padding: 10px 18px;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-weight: 600;
-  background: linear-gradient(135deg, #111, #333);
+  background: linear-gradient(135deg, #c88f5f, #a65d2d);
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: 0.3s ease;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
-
 .login:hover {
-  background: linear-gradient(135deg, #000, #111);
-  transform: scale(1.05);
+  background: linear-gradient(135deg, #d26c18, #8b4419);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
-
-/* BUTTONS GROUP */
 .acsessbutton {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
-  margin-top: 70px;
-  padding: 0 10px;
+  gap: 0.75rem;
+  width: 100%;
 }
-
 .acsess {
-  background: #fff;
+  background-color: #dadada;
   color: #222;
   padding: 10px 16px;
   border: 1px solid #ddd;
   border-radius: 30px;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.25s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 }
-
 .acsess:hover {
-  background-color: #111;
+  background-color: #515151;
   color: #fff;
-  border-color: #111;
-  transform: translateY(-2px);
+  border-color: #000;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
-
-/* SEARCH INPUT */
 .header input[type="text"] {
   border-radius: 30px;
-  font-size: 15px;
-  padding: 9px 16px;
+  font-size: 1rem;
+  padding: 12px 20px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: all 0.4s ease;
-  width: 90px;
-  margin: 15px auto 0;
-  display: block;
-  text-align: left;
+  width: 100%;
+  max-width: 320px;
+  margin: 15px auto;
 }
-
-.header input[type="text"]:hover,
 .header input[type="text"]:focus {
-  width: 240px;
   background-color: #fff;
-  border-color: rgba(0, 0, 0, 0.2);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-color: #c88f5f;
+  box-shadow: 0 6px 20px rgba(200, 143, 95, 0.2);
+  outline: none;
 }
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding: 30px;
+}
+.product-card {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
+}
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+.product-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.05));
+  pointer-events: none;
+}
+.product-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.product-card:hover img {
+  transform: scale(1.05);
+}
+.product-info {
+  padding: 20px;
+  text-align: center;
+}
+.badge {
+  color: #d26c18;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #333;
+}
+.type,
+.colors,
+.price {
+  font-size: 14px;
+  color: #777;
+  margin: 2px 0;
+}
+@media (max-width: 1024px) {
   .logo {
-    width: 100px;
+    width: 10vw;
   }
-
   .acsess {
-    font-size: 13px;
+    font-size: 0.8rem;
     padding: 9px 14px;
   }
-
   .login {
     padding: 8px 14px;
-    font-size: 13px;
+    font-size: 0.8rem;
   }
-
-  .header input[type="text"] {
-    font-size: 14px;
-    width: 80px;
-  }
-
-  .header input[type="text"]:hover,
-  .header input[type="text"]:focus {
-    width: 200px;
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
-
+@media (max-width: 768px) {
+  .logo {
+    width: 12vw;
+  }
+  .acsess {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+  .login {
+    font-size: 0.75rem;
+    padding: 7px 12px;
+  }
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (max-width: 480px) {
   .acsessbutton {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
   }
-
-  .login {
-    top: 10px;
-    right: 10px;
-    padding: 7px 12px;
+  .acsess {
+    font-size: 0.75rem;
+    padding: 7px 10px;
   }
-
-  .header input[type="text"] {
-    width: 75px;
-    font-size: 13px;
-  }
-
-  .header input[type="text"]:hover,
-  .header input[type="text"]:focus {
-    width: 180px;
+  .product-grid {
+    grid-template-columns: 1fr;
   }
 }
