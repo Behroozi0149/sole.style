@@ -1,127 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>SoleStyle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css" />
 </head>
 
 <body>
-    <div class="header">
-        <button class="login">login</button>
-        <img src="images/logo.png" class="logo">
-        <span class="acsessbutton">
-            <button class="acsess">Men's</button>
-            <button class="acsess">Women's</button>
-            <button class="acsess">Kids</button>
-            <button class="acsess">Bags & Luggage</button>
-            <button class="acsess">Taha Car Floor Mats</button>
-            <button class="acsess">Work With Us</button>
-            <button class="acsess">Wholesale</button>
-            <button class="acsess">Branches</button>
-        </span>
-        <input type="text" placeholder="Can I help you?">
-    </div>
-    <div class="product-grid">
-        <div class="product-card">
-            <div class="product-image">
-                <img src="images/1.png" alt="Nike Shoe 1">
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <span class="brand-name"><span class="black">Sole</span><span class="red">Style</span></span>
             </div>
-            <div class="product-info">
-                <h3 class="title">Nike P-6000</h3>
-                <p class="type">Shoes</p>
-                <p class="colors">5 Colours</p>
-                <p class="price">$109.99</p>
+            <nav class="main-nav">
+                <a href="#">Home</a>
+                <a href="#shop">Shop</a>
+                <a href="#categories">Categories</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <input id="search" class="search" type="search" placeholder="What shoes are you looking for?" />
+                <button class="cart-btn" id="openCart" aria-label="Shopping Cart">
+                    🛒 <span class="cart-count" id="cartCount">0</span>
+                </button>
             </div>
         </div>
-        <div class="product-card">
-            <div class="product-image">
-                <img src="images/2.png" alt="Nike Shoe 2">
-            </div>
-            <div class="product-info">
-                <span class="badge">Bestseller</span>
-                <h3 class="title">Nike P-6000</h3>
-                <p class="type">Older Kids Shoes</p>
-                <p class="colors">8 Colours</p>
-                <p class="price">$64.99</p>
-            </div>
+    </header>
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Step into Style</h1>
+            <p>Find comfort, durability, and modern design all in one place.</p>
+            <a href="#shop" class="cta">Shop Now</a>
         </div>
-        <div class="product-card">
-            <div class="product-image">
-                <img src="images/3.png" alt="Nike Shoe 3">
-            </div>
-            <div class="product-info">
-                <span class="badge">Bestseller</span>
-                <h3 class="title">Nike P-6000</h3>
-                <p class="type">Men's Shoes</p>
-                <p class="colors">2 Colours</p>
-                <p class="price">$109.99</p>
-            </div>
+    </section>
+    <main id="shop" class="container">
+        <h2 class="section-title">Our Shoes</h2>
+        <div class="product-grid" id="productGrid">
+            <article class="product-card" data-title="Nike P-6000" data-price="109.99">
+                <div class="product-image">
+                    <img src="images/1.png" alt="Nike P-6000">
+                    <span class="badge">New</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="title">Nike P-6000</h3>
+                    <p class="type">Shoes</p>
+                    <p class="colors">5 Colors</p>
+                    <p class="price">$109.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </article>
+            <article class="product-card" data-title="Nike P-6000" data-price="64.99">
+                <div class="product-image">
+                    <img src="images/2.png" alt="Nike P-6000">
+                    <span class="badge hot">Bestseller</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="title">Nike P-6000</h3>
+                    <p class="type">Kids' Shoes</p>
+                    <p class="colors">8 Colors</p>
+                    <p class="price">$64.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </article>
+            <article class="product-card" data-title="Nike P-6000" data-price="109.99">
+                <div class="product-image">
+                    <img src="images/3.png" alt="Nike P-6000">
+                    <span class="badge hot">Bestseller</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="title">Nike P-6000</h3>
+                    <p class="type">Men's</p>
+                    <p class="colors">2 Colors</p>
+                    <p class="price">$109.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </article>
+            <article class="product-card" data-title="Nike P-6000" data-price="99.99">
+                <div class="product-image">
+                    <img src="images/4.png" alt="Nike P-6000">
+                    <span class="badge hot">Bestseller</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="title">Nike P-6000</h3>
+                    <p class="type">Shoes</p>
+                    <p class="colors">7 Colors</p>
+                    <p class="price">$99.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </article>
+            <article class="product-card" data-title="Nike Air Max 95 Big Bubble" data-price="174.99">
+                <div class="product-image">
+                    <img src="images/5.png" alt="Nike Air Max 95 Big Bubble">
+                    <span class="badge new">Arrived</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="title">Nike Air Max 95 Big Bubble</h3>
+                    <p class="type">Men's</p>
+                    <p class="colors">10 Colors</p>
+                    <p class="price">$174.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </article>
+            <article class="product-card" data-title="Nike Initiator" data-price="74.99">
+                <div class="product-image">
+                    <img src="images/6.png" alt="Nike Initiator">
+                    <span class="badge hot">Bestseller</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="title">Nike Initiator</h3>
+                    <p class="type">Women's</p>
+                    <p class="colors">1 Color</p>
+                    <p class="price">$74.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </article>
+            <article class="product-card" data-title="Nike P-6000 SE" data-price="109.99">
+                <div class="product-image">
+                    <img src="images/7.png" alt="Nike P-6000 SE">
+                    <span class="badge hot">Bestseller</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="title">Nike P-6000 SE</h3>
+                    <p class="type">Men's</p>
+                    <p class="colors">1 Color</p>
+                    <p class="price">$109.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </article>
+            <article class="product-card" data-title="Nike P-6000" data-price="109.99">
+                <div class="product-image">
+                    <img src="images/8.png" alt="Nike P-6000">
+                    <span class="badge hot">Bestseller</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="title">Nike P-6000</h3>
+                    <p class="type">Men's</p>
+                    <p class="colors">1 Color</p>
+                    <p class="price">$109.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </article>
         </div>
-        <div class="product-card">
-            <div class="product-image">
-                <img src="images/4.png" alt="Nike Shoe 4">
-            </div>
-            <div class="product-info">
-                <span class="badge">Bestseller</span>
-                <h3 class="title">Nike P-6000</h3>
-                <p class="type">Shoes</p>
-                <p class="colors">7 Colours</p>
-                <p class="price">$99.99</p>
-            </div>
+    </main>
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+        <div class="cart-head">
+            <h3>Shopping Cart</h3>
+            <button class="close" id="closeCart" aria-label="Close">×</button>
         </div>
-        <div class="product-card">
-            <div class="product-image">
-                <img src="images/5.png" alt="Nike Shoe 4">
+        <div class="cart-body" id="cartItems"></div>
+        <div class="cart-foot">
+            <div class="total-row">
+                <span>Total</span>
+                <strong id="cartTotal">$0.00</strong>
             </div>
-            <div class="product-info">
-                <span class="badge">Just in</span>
-                <h3 class="title">Nike Air max 95 big bubble</h3>
-                <p class="type">men's Shoes</p>
-                <p class="colors">10 Colours</p>
-                <p class="price">$174.99</p>
-            </div>
+            <button class="checkout" id="checkoutBtn">Checkout</button>
+            <button class="clear" id="clearCart">Empty Cart</button>
         </div>
-        <div class="product-card">
-            <div class="product-image">
-                <img src="images/6.png" alt="Nike Shoe 4">
-            </div>
-            <div class="product-info">
-                <span class="badge">Bestseller</span>
-                <h3 class="title">Nike Initiator</h3>
-                <p class="type">Women's Shoes</p>
-                <p class="colors">1 Colours</p>
-                <p class="price">$74.99</p>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image">
-                <img src="images/7.png" alt="Nike Shoe 4">
-            </div>
-            <div class="product-info">
-                <span class="badge">Bestseller</span>
-                <h3 class="title">Nike P-6000 SE</h3>
-                <p class="type">Men's Shoes</p>
-                <p class="colors">1 Colours</p>
-                <p class="price">$109.99</p>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image">
-                <img src="images/8.png" alt="Nike Shoe 4">
-            </div>
-            <div class="product-info">
-                <span class="badge">Bestseller</span>
-                <h3 class="title">Nike P-6000</h3>
-                <p class="type">Men's Shoes</p>
-                <p class="colors">1 Colours</p>
-                <p class="price">$109.99</p>
-            </div>
-        </div>
-    </div>
+    </aside>
+    <div class="backdrop" id="backdrop"></div>
+    <script src="app.js"></script>
 </body>
 
 </html>
